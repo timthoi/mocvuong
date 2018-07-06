@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 2.5//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/2.5/template-install.dtd">
+<extension version="3.1" type="template" client="site">
+	<name>shevron</name>
+	<version>1.0</version>
+	<creationDate>12/11/2014</creationDate>
+	<author>Kelvin Nguyen</author>
+	<authorEmail>loi.nguyen@beyondedge.com.sg</authorEmail>
+	<copyright>Copyright (C) 2005 - 2014 Open Source Matters, Inc. All rights reserved.</copyright>
+	<description>Shevron</description>
+	<files>
+		<filename>component.php</filename>
+		<filename>error.php</filename>
+		<filename>favicon.ico</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<filename>template_preview.png</filename>
+		<filename>template_thumbnail.png</filename>
+		<folder>css</folder>
+		<folder>html</folder>
+		<folder>images</folder>
+		<folder>fonts</folder>
+		<folder>js</folder>
+
+	</files>
+	<positions>
+		<position>submenucountry</position>
+        <position>search</position>
+		<position>topmenu</position>
+		<position>top-right</position>
+        <position>mobile-menu</position>
+		<position>mainmenu</position>
+		<position>slideshow</position>
+		<position>breadcrumb</position>
+		<position>filter</position>
+		<position>contenttop</position>
+		<position>left</position>
+		<position>right</position>
+		<position>bottom</position>
+		<position>content-bottom</position>
+		<position>copyright</position>
+		<position>footer</position>
+		<position>mailing-list</position>
+		<position>customer-services</position>
+        <position>debug</position>
+	</positions>
+	<config>
+		<fields name="params">
+			<fieldset name="advanced">
+				<field name="header_color" class="" type="color" default="#000000"
+					label="Header color"
+					description="" />
+				<field name="header_bottom_color" class="" type="color" default="#37c0e7"
+					label="Header of bottom block color"
+					description="" />
+				<field name="content_color" class="" type="color" default="#000000"
+					label="Content color"
+					description="" />
+			
+				<field name="after_head" class="" type="textarea" default="" filter="raw"
+					label="After head"
+					description="After tag head" />
+				<field name="before_head" class="" type="textarea" default="" filter="raw"
+					label="Before head"
+					description="Before tag head" />
+				<field name="after_body" class="" type="textarea" default="" filter="raw"
+					label="After body"
+					description="After tag body" />
+				<field name="before_body" class="" type="textarea" default="" filter="raw"
+					label="Before body"
+					description="Before tag body" />
+			</fieldset>
+		</fields>
+	</config>
+</extension>

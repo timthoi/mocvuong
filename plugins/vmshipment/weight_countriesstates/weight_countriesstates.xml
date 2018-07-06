@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<extension version="2.5" type="plugin" group="vmshipment" method="upgrade">
+    <name>Shipping By State VM plugin</name>
+    <creationDate>Feb 22 2015</creationDate>
+    <author>Stergios Zgouletas</author>
+    <authorUrl>http://www.web-expert.gr</authorUrl>
+    <copyright>Copyright (C) 2012 - Web-expert.gr</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <version>3.0.8</version>
+    <description>Shipment based on the Weight, ZIP and Countries + States</description>
+	<updateservers>
+		<server type="extension" priority="1" name="Shipping By State VM plugin">http://web-expert.gr/updates/weight_countriesstates.xml</server>
+	</updateservers>
+	<!--
+    <languages>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_vmshipment_weight_countriesstates.ini</language>
+		<language tag="en-GB">languages/en-GB/en-GB.plg_vmshipment_weight_countriesstates.sys.ini</language>
+    </languages> -->
+    <files>
+		<filename plugin="weight_countriesstates">weight_countriesstates.php</filename>
+		<folder>elements</folder>
+		<folder>language</folder>
+		<folder>tmpl</folder>
+		<filename>index.html</filename>
+    </files>
+    <vmconfig>
+        <fields name="params">
+            <fieldset name="template">
+                <field name="shipment_logos" type="vmfiles" directory="/images/stories/virtuemart/shipment" hide_none="1" label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_LOGOS" size="40" description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_LOGOS_DESC"/>
+            </fieldset>
+            <fieldset name="restrictions" addfieldpath="/plugins/vmshipment/weight_countriesstates/elements">
+                <field name="show_on_pdetails" type="radio" scope="com_virtuemart" default="1" label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_SHOW_ON_PRDETAILS" description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_SHOW_ON_PRDETAILS_TIP">
+                    <option value="0">COM_VIRTUEMART_NO</option>
+                    <option value="1">COM_VIRTUEMART_YES</option>
+                </field>
+                <field name="countriesstates" type="vmcountriesstates" multiple="true" scope="com_virtuemart" default="" label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_COUNTRIESSTATES" description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_COUNTRIESSTATES_DESC"/>
+                <field name="zip_start" type="text" size="10" default="" label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_ZIP_START"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_ZIP_START_DESC"/>
+                <field name="zip_stop" type="text" size="10" default="" label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_ZIP_STOP"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_ZIP_STOP_DESC"/>
+                <field name="weight_start" type="text" size="10" default=""
+                       label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_WEIGHT_START"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_WEIGHT_START_DESC"/>
+                <field name="weight_stop" type="text" size="10" default=""
+                       label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_WEIGHT_STOP"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_WEIGHT_STOP_DESC"/>
+                <field name="weight_unit" type="vmweightunit" size="10" default=""
+                       label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_WEIGHT_UNIT"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_WEIGHT_UNIT_DESC"/>
+                <field name="nbproducts_start" type="text" size="10" default=""
+                       label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_NBPRODUCTS_START"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_NBPRODUCTS_START_DESC"/>
+                <field name="nbproducts_stop" type="text" size="10" default=""
+                       label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_NBPRODUCTS_STOP"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_NBPRODUCTS_STOP_DESC"/>
+                <field name="orderamount_start" type="text" size="10" default=""
+                       label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_ORDERAMOUNT_START"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_ORDERAMOUNT_START_DESC"/>
+                <field name="orderamount_stop" type="text" size="10" default=""
+                       label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_ORDERAMOUNT_STOP"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_ORDERAMOUNT_STOP_DESC"/>
+            </fieldset>
+            <fieldset name="fee">
+                <field name="shipment_cost" type="text" label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_COST"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_COST_DESC" default="0"/>
+                <field name="package_fee" type="text" label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_PACKAGE_FEE"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_PACKAGE_FEE_DESC"/>
+                <field name="tax_id" type="vmtaxes" scope="com_virtuemart" label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_TAX"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_TAX_DESC" default="0"/>
+                <field name="free_shipment" type="text" label="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_FREE_SHIPPING_AMOUNT"
+                       description="VMSHIPMENT_WEIGHT_COUNTRIESSTATES_FREE_SHIPPING_AMOUNT_DESC" default=""/>
+            </fieldset>
+        </fields>
+    </vmconfig>
+</extension>

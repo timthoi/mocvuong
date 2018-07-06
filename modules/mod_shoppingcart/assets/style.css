@@ -1,0 +1,65 @@
+.main
+{
+	border-radius: 0px 0px 10px 10px;
+    box-shadow: 0 0 20px #585858;
+    display:none;
+    position:absolute;
+    background-color:#909090;width: 277px;
+
+}
+.cartlbl
+{
+
+	
+	background-color:#282828 ;
+	font-size:18px;
+	padding:0px 77px 0px 0px;
+	height:45px;
+	width:200px;
+	color:white;
+}
+.incart
+{
+
+	background-color:#585858;
+	color:white;padding:5px;
+	padding-left:15px;
+}
+.p_name_cls a
+{
+	color: #000000;
+		
+	text-decoration:none;font-size:16px;color:black;
+}
+.total
+{
+
+	background-color:gray;
+	text-align:right;
+	width:290px !important;
+}
+.subtotal
+{
+
+	background-color:#202020;
+	color:#B0B0B0;
+	 font-size:17px;
+}
+.footer
+{
+
+	text-decoration:none
+	;font-size:15px;
+	color:black;
+}
+.image
+{
+
+	height:100px;width:100px;
+}
+.td
+{
+
+	vertical-align:top;
+	width:110px;
+}

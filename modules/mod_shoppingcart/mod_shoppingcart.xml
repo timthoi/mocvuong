@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5/3" client="site" method="upgrade">
+    <name>Raindrops Shopping Cart Module for Virtuemart</name>
+    <author>raindropsinfotech</author>
+    <creationDate>March 2015</creationDate>
+    <copyright>2015</copyright>
+    <license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+    <authorEmail>raindropsinfotech@gmail.com</authorEmail>
+    <authorUrl>www.raindropsinfotech.com</authorUrl>
+    <version>1.0.1</version>
+    <description>This Module Has Dispaly Cart In E-Commerce Site In.</description>
+    <files>
+        <filename module="mod_shoppingcart">mod_shoppingcart.php</filename>
+        <filename>helper.php</filename>
+        <filename>tmpl/default.php</filename>
+         <filename>tmpl/green.php</filename>
+          <filename>tmpl/orange.php</filename>
+          <filename>assets/style.css</filename>
+          <filename>assets/js/update_cart.js</filename>
+        <folder>language</folder>
+    </files>
+    <config>
+        <fields name="params">
+        <fieldset name="basic">
+        
+            <filename>tmpl/default.php</filename>
+            <field name="cart" type="media" label="Cart Image" description="Select the Cart Image." />
+            <field name="carttext" type="text" default="My Cart" label="Cart Text"></field>
+            <field name="message" type="text" default="Not Any Product In Cart" label="Empty Cart Text"></field>
+                 <field name="price" type="list" default="1"
+            label="Show Product Price">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field>
+                <field name="description" type="list" default="1"
+            label="Show Product Description">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </field> 
+                 <field name="layout" type="list" default="Default"
+            label="Select Your Layout">
+                    <option value="Default">Default</option>
+                    <option value="orange">orange</option>
+                      <option value="green">green</option>
+                </field> 
+
+                 </fieldset>
+            <fieldset name="advanced">
+                    <field name="maincss" type="textarea" default="border-radius: 0px 0px 10px 10px;
+                        box-shadow: 0 0 20px #585858;
+                        display:none;
+                        position:absolute;
+                        background-color:#909090;width: 277px;z-index:1;"
+                     label="Main cart Style"  rows="5" cols="45"></field>
+                    <field name="cartlbl" type="textarea" default="
+                        background-color:#282828 ;
+                        font-size:18px;
+                        padding:0px 77px 0px 0px;
+                        height:45px;
+                        width:200px;
+                        color:white;
+                        " label="Cart Header Style"  rows="2" cols="45"></field>
+                    <field name="incart" type="textarea" default="background-color:#585858;
+    color:white;padding:5px;
+    padding-left:15px;" label="In cart Style"  rows="2" cols="45"></field>
+                    <field name="total" type="textarea" default="
+                        background-color:gray;
+                        text-align:right;
+                        width:290px !important;
+                        " label="Product Total Style"  rows="2" cols="45"></field>
+                        <field name="subtotal" type="textarea" default="
+                           background-color:#202020;
+    color:#B0B0B0;font-size:17px;" label="Product SubTotal Style"  rows="2" cols="45"></field>
+                        <field name="button" type="textarea" default="background-color:#282828;border-color:#282828 !important;margin:10px;border-radius:5px; text-align:center;color:white;
+                       " label="Button Style"  rows="2" cols="45"></field>
+                         <field name="scroll" type="textarea" default="background-color:red;
+                        border-radius:15px;"
+                     label="Scroll Style"  rows="2" cols="45"></field>
+            </fieldset>
+        </fields>
+    </config>
+    <updateservers>
+        <!-- Note: No spaces or linebreaks allowed between the server tags -->
+        <server type="extension" name="VirtueMart3 mod_virtuemart_cart Update Site"><![CDATA[http://virtuemart.net/releases/vm3/mod_virtuemart_cart_update.xml]]></server>
+    </updateservers>
+</extension>

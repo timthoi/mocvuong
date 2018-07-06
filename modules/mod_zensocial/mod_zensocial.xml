@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="2.5.0" client="site" method="upgrade">
+	<name>Zen Social</name>
+	<libraryname>zen</libraryname>
+	<author>Joomla Bamboo</author>
+	<creationDate>September 09, 2013</creationDate>
+	<copyright>Copyright (c) 2013 Joomla Bamboo. All rights reserved.</copyright>
+	<license>GNU General Public License version 2 or later</license>
+	<authorEmail>design@joomlabamboo.com</authorEmail>
+	<authorUrl>www.joomlabamboo.com</authorUrl>
+	<version>1.1.1</version>
+	<description>ZenSocial is a simple module used to display social image and font icons in a module.</description>
+	<languages>
+		<language tag="en-GB">language/en-GB/en-GB.mod_zensocial.ini</language>
+		<language tag="en-GB">language/en-GB/en-GB.mod_zensocial.sys.ini</language>
+	</languages>
+	<files>
+		<filename module="mod_zensocial">mod_zensocial.php</filename>
+		<folder>assets</folder>
+		<folder>css</folder>
+		<folder>fields</folder>
+		<folder>fonts</folder>
+		<folder>icons</folder>
+		<folder>js</folder>
+		<filename>index.html</filename>
+		<filename>helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	<config>
+		<fields name="params" addfieldpath="/modules/mod_zensocial/fields">
+			<fieldset  name="general" group="general" label="General Settings">
+            <field name="scriptselement" type="scripts" label="" description="" />
+			<!--	<field name="socialiconstitle" type="text" default="" label="ZENSOCIALICONSTITLE" description="ZENSOCIALICONSTITLEDESCRIPTION" /> -->
+				<field name="socialalign" type="list" default="zenright" label="ZENSOCIALALIGN" description="ZENSOCIALALIGNDESCRIPTION">
+					<option value="zenleft">ZENLEFT</option>
+					<option value="zencenter">ZENCENTER</option>
+					<option value="zenright">ZENRIGHT</option>
+				</field>
+				<field name="socialfonticons" type="list" default="0" label="ZEN_SOCIAL_FONT_ICONS" description="ZEN_SOCIAL_FONT_ICONS_DESCRIPTION">
+					<option value="1">Use font icons</option>
+					<option value="0">Use image icons</option>
+				</field>
+		</fieldset>
+		<fieldset  name="icons" group="icons" label="Icon Settings">
+
+				<field name="iconsize" type="text" default="1.4em" label="ZEN_ICON_SIZE" description="ZEN_ICON_SIZE_DESCRIPTION" />
+				<field name="iconcolor" type="color" default="000" label="ZEN_ICON_COLOR"  description="ZEN_ICON_COLOR_DESCRIPTION"  />
+				<field name="iconcss" type="textarea" default="" label="ZEN_ICON_CSS" description="ZEN_ICON_CSS_DESCRIPTION" />
+				<field name="iconcssbreakpoint" type="text" default="620px" label="ZEN_ICON_BREAK_POINT" description="ZEN_ICON_BREAK_POINT_DESCRIPTION" />
+				<field name="iconcssmedia" type="textarea" default="#socialicons.fixedright,#socialicons.fixedleft {position: absolute;width: auto;right: 2%;top: 4px;margin-top: 8px;}#socialicons.fixedright i,#socialicons.fixedleft i {color: #eee;font-size: 1.2em;}" label="ZEN_ICON_MOBILE_CSS" description="ZEN_ICON_MOBILE_CSS_DESCRIPTION" />
+				<field type="spacer" name="spacer1" label="Icon 1" />
+				<field name="icon1Font" type="foundicon" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION"/>
+				<field name="icon1FontLink" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+				<field type="spacer" name="spacer2" label="Icon 2" />
+				<field name="icon2Font" type="foundicon" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION"/>
+				<field name="icon2FontLink" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+				<field type="spacer" name="spacer3" label="Icon 3" />
+				<field name="icon3Font" type="foundicon" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION"/>
+				<field name="icon3FontLink" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+				<field type="spacer" name="spacer4" label="Icon 4" />
+				<field name="icon4Font" type="foundicon" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION"/>
+				<field name="icon4FontLink" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+				<field type="spacer" name="spacer5" label="Icon 5" />
+				<field name="icon5Font" type="foundicon" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION"/>
+				<field name="icon5FontLink" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+				<field type="spacer" name="spacer6" label="Icon 6" />
+				<field name="icon6Font" type="foundicon" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION"/>
+				<field name="icon6FontLink" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+		</fieldset>
+		<fieldset name="images" group="images" label="Image Settings">
+				<field type="spacer" name="spacer7" label="Icon 1" />
+				<field name="icon1Image" type="imagelist" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION" directory="modules/mod_zensocial/icons/" exclude="" stripext="" />
+				<field name="icon1Link" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+				<field type="spacer" name="spacer8" label="Icon 2" />
+				<field name="icon2Image" type="imagelist" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION" directory="modules/mod_zensocial/icons/" exclude="" stripext="" />
+				<field name="icon2Link" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+				<field type="spacer" name="spacer9" label="Icon 3" />
+				<field name="icon3Image" type="imagelist" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION" directory="modules/mod_zensocial/icons/" exclude="" stripext="" />
+				<field name="icon3Link" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+				<field type="spacer" name="spacer10" label="Icon 4" />
+				<field name="icon4Image" type="imagelist" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION" directory="modules/mod_zensocial/icons/" exclude="" stripext="" />
+				<field name="icon4Link" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+				<field type="spacer" name="spacer11" label="Icon 5" />
+				<field name="icon5Image" type="imagelist" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION" directory="modules/mod_zensocial/icons/" exclude="" stripext="" />
+				<field name="icon5Link" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+				<field type="spacer" name="spacer12" label="Icon 6" />
+				<field name="icon6Image" type="imagelist" default="-1" label="ZENICONIMAGE" description="ZENICONIMAGEDESCRIPTION" directory="modules/mod_zensocial/icons/" exclude="" stripext="" />
+				<field name="icon6Link" type="text" default="#" label="ZENSOCIALICONLINK" description="ZENSOCIALICONLINKDESCRIPTION" />
+		</fieldset>
+		<fieldset  name="advanced" group="advanced" label="Advanced Settings">
+			<field name="moduleclass_sfx" type="text" default="" label="Module Class Suffix" description="PARAMMODULECLASSSUFFIX" />
+		</fieldset>
+		</fields>
+	</config>
+</extension>
